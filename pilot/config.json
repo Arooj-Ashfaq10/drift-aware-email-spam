@@ -1,0 +1,29 @@
+{
+  "parsed": "/content/drive/MyDrive/trec_work/trec07p_parsed.csv.gz",
+  "out": "/content/drive/MyDrive/trec_work/pilot",
+  "backend": "hf",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "no_4bit": true,
+  "batch_size": 8,
+  "periods": 12,
+  "eval_per_class": 10,
+  "k": 6,
+  "ex_chars": 300,
+  "msg_chars": 500,
+  "seeds": [
+    0
+  ],
+  "intervals": [
+    1,
+    3
+  ],
+  "dtr_mult": [
+    2,
+    4,
+    8
+  ],
+  "only": [
+    "zs",
+    "static"
+  ]
+}

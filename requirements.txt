@@ -1,0 +1,9 @@
+torch
+transformers>=4.43
+accelerate
+bitsandbytes
+pandas
+numpy
+scikit-learn
+scipy
+matplotlib

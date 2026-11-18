@@ -1,0 +1,14 @@
+A,B,only_A_correct,only_B_correct,p,n
+static,zs,282,51,0.0,1100
+dtr_m6,static,54,39,0.1462,1100
+dtr_m8,static,67,62,0.7249,1100
+random_R1,static,37,99,0.0,1100
+random_R3,static,25,51,0.0038,1100
+recent_R1,static,45,48,0.8358,1100
+recent_R3,static,27,43,0.0722,1100
+recent_even1,static,11,33,0.0013,1100
+recent_even2,static,39,35,0.7275,1100
+dtr_m6,recent_even2,64,53,0.3553,1100
+dtr_m8,recent_even1,68,41,0.0124,1100
+recent_R1,random_R1,101,42,0.0,1100
+recent_R3,random_R3,45,35,0.3143,1100
