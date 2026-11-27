@@ -1,0 +1,58 @@
+policy,seed,refreshes,labels_used,labels_inspected,schedule,k,prompt_variant,eval_mode,model,seconds,ms_per_email_uncached,tokens_total,peak_gpu_gb
+sel_random_static,0,0,6,14,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,247.7,211.4,718361,4.51
+sel_random_static,1,0,6,20,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,339.0,250.6,1668358,4.96
+sel_random_static,2,0,6,10,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,274.4,245.3,2432115,4.96
+sel_random_even,0,1,12,22,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,123.4,245.3,2774574,4.96
+sel_random_even,1,1,12,31,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,141.7,249.5,3168097,4.96
+sel_random_even,2,1,12,16,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,168.2,258.1,3632815,4.96
+sel_random_dtr,0,1,12,31,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,359.1,275.6,4630290,4.96
+sel_random_dtr,1,1,12,28,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,266.3,274.8,5375499,4.96
+sel_random_dtr,2,1,12,33,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,270.0,274.6,6130448,4.96
+sel_newest_static,0,0,6,19,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,281.0,270.2,6910501,4.96
+sel_newest_static,1,0,6,19,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,280.9,266.8,7690554,4.96
+sel_newest_static,2,0,6,19,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,280.8,264.0,8470607,4.96
+sel_newest_even,0,1,12,30,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,106.2,261.8,8759056,4.96
+sel_newest_even,1,1,12,30,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,106.2,259.7,9047505,4.96
+sel_newest_even,2,1,12,30,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,106.1,257.8,9335954,4.96
+sel_newest_dtr,0,1,12,35,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,247.9,257.3,10029541,4.96
+sel_newest_dtr,1,1,12,35,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,247.9,256.9,10723128,4.96
+sel_newest_dtr,2,1,12,35,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,248.1,256.5,11416715,4.96
+sel_similarity_static,0,0,6,157,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,312.1,257.2,12291052,4.96
+sel_similarity_static,1,0,6,151,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,309.5,257.7,13159569,4.96
+sel_similarity_static,2,0,6,147,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,287.6,256.9,13961738,4.96
+sel_similarity_even,0,1,12,180,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,99.8,255.4,14233493,4.96
+sel_similarity_even,1,1,12,174,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,112.7,254.6,14540109,4.96
+sel_similarity_even,2,1,12,202,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,104.4,253.5,14825612,4.96
+sel_similarity_dtr,0,1,12,248,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,221.9,252.1,15438357,4.96
+sel_similarity_dtr,1,1,12,182,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,222.1,250.9,16052076,4.96
+sel_similarity_dtr,2,1,12,175,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,205.6,249.1,16619043,4.96
+sel_diversity_static,0,0,6,9,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,553.1,259.6,18096332,6.31
+sel_diversity_static,1,0,6,6,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,417.3,264.0,19254685,6.31
+sel_diversity_static,2,0,6,7,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,470.7,269.9,20548062,6.31
+sel_diversity_even,0,1,12,20,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,116.5,269.2,20864498,6.31
+sel_diversity_even,1,1,12,15,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,132.2,269.0,21227579,6.31
+sel_diversity_even,2,1,12,17,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,127.1,268.7,21576421,6.31
+sel_diversity_dtr,0,1,12,18,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,328.3,270.7,22484288,6.31
+sel_diversity_dtr,1,1,12,13,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,383.0,274.5,23534359,6.31
+sel_diversity_dtr,2,1,12,15,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,238.0,273.4,24188012,6.31
+sel_uncertainty_static,0,0,6,124,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,326.4,270.2,25087402,6.31
+sel_uncertainty_static,1,0,6,134,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,323.4,268.4,25984497,6.31
+sel_uncertainty_static,2,0,6,142,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,321.2,267.0,26872730,6.31
+sel_uncertainty_even,0,1,12,192,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,218.2,266.5,27479829,6.31
+sel_uncertainty_even,1,1,12,142,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,210.4,265.8,28062292,6.31
+sel_uncertainty_even,2,1,12,151,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,212.9,265.3,28650490,6.31
+sel_uncertainty_dtr,0,1,12,168,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,305.3,264.0,29484174,6.31
+sel_uncertainty_dtr,1,1,12,143,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,325.4,263.3,30382647,6.31
+sel_uncertainty_dtr,2,1,12,152,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,313.1,262.3,31248124,6.31
+dtr_keep2_m8,0,1,10,18,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,346.4,264.3,32209561,6.31
+dtr_keep2_m8,1,1,10,27,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,270.2,264.5,32962562,6.31
+dtr_keep2_m8,2,1,10,29,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,252.2,264.3,33666863,6.31
+dtr_keep3_m8,0,1,9,18,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,346.4,266.2,34628300,6.31
+dtr_keep3_m8,1,1,9,23,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,260.1,266.1,35355003,6.31
+dtr_keep3_m8,2,1,9,29,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,247.0,265.8,36044694,6.31
+dtr_keep2_m6,0,2,14,22,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,153.0,265.6,36463547,6.31
+dtr_keep2_m6,1,2,14,33,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,151.4,265.4,36877680,6.31
+dtr_keep2_m6,2,2,14,33,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,139.3,264.9,37254643,6.31
+dtr_keep3_m6,0,2,12,21,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,142.6,264.6,37641636,6.31
+dtr_keep3_m6,1,2,12,29,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,153.7,264.4,38060489,6.31
+dtr_keep3_m6,2,2,12,32,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,138.6,264.0,38436272,6.31

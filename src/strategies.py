@@ -1,4 +1,10 @@
-"""Example selection, labelled windows, and the label-free content-drift monitor (DTR) for email streams."""
+"""Demonstration selection, labelled windows, refresh schedules and the label-free content-drift monitor (v5).
+
+Selection (comments 23, 24, 26, 35): an oracle inspects candidate emails in a strategy-specific ORDER and reveals each label;
+inspection stops once k/2 ham and k/2 spam are found. Every inspected email costs one label (inspected cost), the k kept
+ones are the used cost. Near-duplicates (char n-gram cosine > dup_thr to an already chosen demonstration) are skipped.
+Orders: random | newest (newest first) | similarity (closest to the newest week's unlabelled centroid first)
+        | diversity (farthest-first traversal) | uncertainty (smallest |LLM score| under the current prompt first)."""
 import numpy as np
 import pandas as pd
 from sklearn.feature_extraction.text import HashingVectorizer
@@ -6,13 +12,8 @@ from sklearn.feature_extraction.text import HashingVectorizer
 _HV = HashingVectorizer(analyzer="char_wb", ngram_range=(3, 5), n_features=2 ** 16, alternate_sign=False, norm="l2")
 
 
-def pick_examples(pool, k, seed=0):
-    """Class-balanced random draw: k/2 spam + k/2 ham from `pool` (uses the ex_text column)."""
-    rng = np.random.default_rng(seed)
-    sp = pool[pool.label == 1]; hm = pool[pool.label == 0]
-    sp = sp.iloc[rng.permutation(len(sp))[: k // 2]]; hm = hm.iloc[rng.permutation(len(hm))[: k - k // 2]]
-    ex = pd.concat([sp, hm]); ex = ex.iloc[rng.permutation(len(ex))]
-    return list(zip(ex.ex_text.tolist(), ex.label.tolist()))
+def vec(texts):
+    return _HV.transform(list(texts))
 
 
 def window(stream, p):
@@ -26,20 +27,72 @@ def history(stream, t):
     return h[~((h.period == 0) & (h.split == "eval"))]
 
 
-def _centroid(texts):
-    c = np.asarray(_HV.transform(texts).mean(axis=0)).ravel()
+def _order(pool, how, rng, cand_cap=400, ref_centroid=None, scorer=None):
+    """Return candidate row positions (into pool) in inspection order."""
+    n = len(pool)
+    if how == "random" or n == 0:
+        return rng.permutation(n)
+    if how == "newest":
+        return np.argsort(-pool.recv.values.astype("datetime64[s]").astype(np.int64), kind="stable")
+    sub = rng.permutation(n)[: min(cand_cap, n)]            # unlabelled candidate sample
+    X = vec(pool.ex_text.values[sub])
+    if how == "similarity":
+        c = ref_centroid if ref_centroid is not None else np.asarray(X.mean(axis=0)).ravel()
+        return sub[np.argsort(-(X @ c))]
+    if how == "diversity":
+        first = int(np.argmax(X @ np.asarray(X.mean(axis=0)).ravel()))
+        order, d = [first], 1.0 - (X @ X[first].T).toarray().ravel()
+        for _ in range(len(sub) - 1):
+            j = int(np.argmax(d)); order.append(j); d = np.minimum(d, 1.0 - (X @ X[j].T).toarray().ravel())
+        return sub[np.array(order)]
+    if how == "uncertainty":
+        s = scorer(pool.msg_text.values[sub].tolist())
+        return sub[np.argsort(np.abs(s))]
+    raise ValueError(how)
+
+
+def select(pool, k, seed, how="random", dup_thr=0.9, keep=None, **kw):
+    """Inspect candidates in order until k/2 per class are found. keep: list of (text, label) old demos to retain.
+    Returns (examples, inspected, used)."""
+    rng = np.random.default_rng(seed)
+    keep = list(keep or [])
+    need = {1: k // 2 - sum(1 for _, y in keep if y == 1), 0: (k - k // 2) - sum(1 for _, y in keep if y == 0)}
+    chosen, chosen_vec, inspected = list(keep), [vec([t]) for t, _ in keep], 0
+    for i in _order(pool, how, rng, **kw):
+        if need[0] <= 0 and need[1] <= 0:
+            break
+        r = pool.iloc[int(i)]; inspected += 1; y = int(r.label)
+        if need[y] <= 0:
+            continue
+        v = vec([r.ex_text])
+        if dup_thr and any(float((v @ c.T).toarray()[0, 0]) > dup_thr for c in chosen_vec):
+            continue
+        chosen.append((r.ex_text, y)); chosen_vec.append(v); need[y] -= 1
+    order = rng.permutation(len(chosen))
+    return [chosen[j] for j in order], inspected, len(chosen) - len(keep)
+
+
+def keep_closest(examples, ref_centroid, n_keep):
+    """Partial replacement: keep the n_keep old demonstrations closest to the newest week's centroid (comment 22)."""
+    if n_keep <= 0 or not examples:
+        return []
+    sims = (vec([t for t, _ in examples]) @ ref_centroid).ravel()
+    return [examples[i] for i in np.argsort(-sims)[:n_keep]]
+
+
+def centroid(texts):
+    c = np.asarray(vec(texts).mean(axis=0)).ravel()
     return c / (np.linalg.norm(c) + 1e-12)
 
 
 def period_stats(stream, cap=3000, chars=500, seed=0, n_splits=20):
-    """Per period: unit content centroid of the UNLABELLED emails and the sampling-noise floor, i.e. the mean content distance
-    between two random halves of the same period (what pure sampling noise produces)."""
+    """Per period: unit centroid of the UNLABELLED emails and the sampling-noise floor (mean split-half distance)."""
     rng = np.random.default_rng(seed); cents, noise = {}, {}
     for p in sorted(stream.period.unique()):
         sub = stream[stream.period == p]
         if len(sub) > cap:
             sub = sub.iloc[rng.choice(len(sub), cap, replace=False)]
-        X = _HV.transform((sub.subject + " " + sub.body.str[:chars]).tolist())
+        X = vec((sub.subject + " " + sub.body.str[:chars]).tolist())
         c = np.asarray(X.mean(axis=0)).ravel(); cents[int(p)] = c / (np.linalg.norm(c) + 1e-12)
         d = []
         for _ in range(n_splits):
@@ -50,20 +103,18 @@ def period_stats(stream, cap=3000, chars=500, seed=0, n_splits=20):
     return cents, noise
 
 
-def period_centroids(stream, cap=3000, chars=500, seed=0):
-    return period_stats(stream, cap, chars, seed, n_splits=2)[0]
-
-
-def dtr_schedule(cents, noise, mult):
-    """Label-free, causal Drift-Triggered Refresh schedule on the UNLABELLED incoming stream (no warm-up needed).
-    After each period p = 1..T-2: d = 1 - cos(centroid(ref), centroid(p)). Refresh the prompt examples for period p+1 (examples drawn
-    from period p) if d > theta, with theta = mult * noise[ref], i.e. `mult` times the content distance that pure sampling noise
-    produces inside the reference period. After a refresh the reference becomes period p. The first reference is period 0."""
-    T = len(cents); ref, refresh, traj = 0, [], []
+def dtr_schedule(cents, noise, mult, cooldown=1, persistence=1, reset=True):
+    """Label-free, causal Drift-Triggered Refresh schedule. After each period p = 1..T-2: d = 1 - cos(c[ref], c[p]);
+    alarm if d > mult * noise[ref] for `persistence` consecutive periods and at least `cooldown` periods since the last
+    refresh. A refresh before period p+1 uses examples from period p. reset=False keeps the Week-0 reference (ablation)."""
+    T = len(cents); ref, refresh, traj, streak, last = 0, [], [], 0, -10 ** 9
     for p in range(1, T - 1):
         d = 1.0 - float(cents[ref] @ cents[p]); theta = mult * noise[ref]; traj.append((p, d, theta))
-        if d > theta:
-            refresh.append(p + 1); ref = p
+        streak = streak + 1 if d > theta else 0
+        if streak >= persistence and (p + 1) - last >= cooldown:
+            refresh.append(p + 1); last = p + 1; streak = 0
+            if reset:
+                ref = p
     return refresh, traj
 
 
@@ -77,3 +128,9 @@ def even_schedule(T, n, start=2):
         return []
     span = T - start
     return sorted(set(min(T - 1, start + int(np.floor((i + 0.5) * span / n))) for i in range(n)))
+
+
+def random_schedule(T, n, seed, start=2):
+    """Ablation: same number of refreshes as DTR at random times (comment 51)."""
+    rng = np.random.default_rng(10_000 + seed)
+    return sorted(rng.choice(np.arange(start, T), size=min(n, T - start), replace=False).tolist())

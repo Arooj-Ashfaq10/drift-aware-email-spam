@@ -1,0 +1,202 @@
+policy,seed,refreshes,labels_used,labels_inspected,schedule,k,prompt_variant,eval_mode,model,seconds,ms_per_email_uncached,tokens_total,peak_gpu_gb
+zs,0,0,0,0,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,89.5,76.9,228317,4.14
+static,0,0,6,14,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,270.3,153.8,946678,4.51
+static,1,0,6,20,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,367.4,207.3,1896675,4.96
+static,2,0,6,10,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,299.3,219.4,2660432,4.96
+static,3,0,6,14,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,334.0,232.6,3520801,4.96
+static,4,0,6,25,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,304.7,237.2,4295034,4.96
+recent_R1,0,10,66,110,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,314.1,244.6,5066413,4.96
+recent_R1,1,10,66,105,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,311.7,250.0,5833992,4.96
+recent_R1,2,10,66,115,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,307.7,253.9,6591271,4.96
+recent_R1,3,10,66,104,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,298.0,256.3,7321750,4.96
+recent_R1,4,10,66,106,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,299.2,258.4,8059129,4.96
+random_R1,0,10,66,123,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,307.6,260.7,8812308,4.96
+random_R1,1,10,66,130,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,301.2,262.3,9549587,4.96
+random_R1,2,10,66,107,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,295.1,263.2,10273666,4.96
+random_R1,3,10,66,119,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,285.1,263.4,10971445,4.96
+random_R1,4,10,66,121,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,303.2,264.7,11719024,4.96
+recent_R3,0,3,24,41,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,137.1,264.9,12062231,4.96
+recent_R3,1,3,24,43,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,152.0,265.8,12446190,4.96
+recent_R3,2,3,24,30,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,162.2,267.3,12856391,4.96
+recent_R3,3,3,24,32,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,155.5,268.3,13247495,4.96
+recent_R3,4,3,24,49,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,140.0,268.5,13599741,4.96
+random_R3,0,3,24,39,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,156.0,269.4,13993738,4.96
+random_R3,1,3,24,67,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,147.9,269.9,14369105,4.96
+random_R3,2,3,24,46,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,143.1,270.2,14729544,4.96
+random_R3,3,3,24,36,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,129.7,269.8,15051465,4.96
+random_R3,4,3,24,63,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,129.9,269.5,15376763,4.96
+fixed_w1,0,1,12,31,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,351.4,274.4,16272408,4.96
+fixed_w1,1,1,12,28,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,259.6,275.1,16941687,4.96
+fixed_w1,2,1,12,33,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,263.4,275.9,17619706,4.96
+fixed_w1,3,1,12,24,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,229.5,275.2,18205081,4.96
+fixed_w1,4,1,12,42,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,250.0,275.5,18850762,4.96
+dtr_m6,0,2,18,37,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,148.1,275.7,19224880,4.96
+dtr_m6,1,2,18,35,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,162.7,276.6,19637218,4.96
+dtr_m6,2,2,18,39,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,143.6,276.7,20001046,4.96
+dtr_m6,3,2,18,36,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,146.8,276.9,20372714,4.96
+dtr_m6,4,2,18,48,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,149.7,277.2,20753202,4.96
+recent_even2_m6,0,2,18,34,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,115.6,277.2,21044539,4.96
+recent_even2_m6,1,2,18,37,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,122.7,277.6,21353999,4.96
+recent_even2_m6,2,2,18,25,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,122.9,277.9,21662523,4.96
+recent_even2_m6,3,2,18,26,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,128.3,278.3,21986473,4.96
+recent_even2_m6,4,2,18,38,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,126.6,278.8,22306841,4.96
+randtrig_m6,0,2,18,29,3 7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,136.2,278.6,22654356,4.96
+randtrig_m6,1,2,18,38,6 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,4.4,278.6,22654356,4.96
+randtrig_m6,2,2,18,29,8 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,30.0,278.5,22719981,4.96
+randtrig_m6,3,2,18,26,4 8,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,74.5,278.1,22899378,4.96
+randtrig_m6,4,2,18,41,5 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,107.6,277.9,23165569,4.96
+active_even2_m6,0,2,18,166,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,560.6,276.3,24587942,4.96
+active_even2_m6,1,2,18,173,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,567.9,275.4,26029377,4.96
+active_even2_m6,2,2,18,175,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,558.1,274.4,27439486,4.96
+active_even2_m6,3,2,18,133,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,555.3,273.7,28857542,4.96
+active_even2_m6,4,2,18,152,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,566.0,273.3,30299746,4.96
+active_dtr_m6,0,2,18,171,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,475.3,273.4,31528263,4.96
+active_dtr_m6,1,2,18,177,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,464.2,273.3,32709416,4.96
+active_dtr_m6,2,2,18,168,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,467.2,273.1,33917504,4.96
+active_dtr_m6,3,2,18,148,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,503.2,273.7,35217734,4.96
+active_dtr_m6,4,2,18,150,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,462.5,273.5,36404589,4.96
+dtr_noreset_m6,0,10,66,110,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,18.8,273.5,36404589,4.96
+dtr_noreset_m6,1,10,66,105,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,18.7,273.5,36404589,4.96
+dtr_noreset_m6,2,10,66,115,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,19.3,273.5,36404589,4.96
+dtr_noreset_m6,3,10,66,104,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,19.3,273.5,36404589,4.96
+dtr_noreset_m6,4,10,66,106,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,18.8,273.5,36404589,4.96
+dtr_guard_m6,0,2,18,29,3 8,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,120.5,273.6,36723563,4.96
+dtr_guard_m6,1,2,18,37,3 8,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,196.7,273.7,37234595,4.96
+dtr_guard_m6,2,2,18,36,3 8,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,161.0,273.6,37645574,4.96
+dtr_guard_m6,3,2,18,40,3 8,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,109.8,273.5,37924022,4.96
+dtr_guard_m6,4,2,18,39,3 8,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,188.0,273.4,38410918,4.96
+dtr_m8,0,1,12,31,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,4.0,273.4,38410918,4.96
+dtr_m8,1,1,12,28,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,3.7,273.4,38410918,4.96
+dtr_m8,2,1,12,33,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,4.0,273.4,38410918,4.96
+dtr_m8,3,1,12,24,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,4.1,273.4,38410918,4.96
+dtr_m8,4,1,12,42,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,4.0,273.4,38410918,4.96
+recent_even1_m8,0,1,12,22,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,3.2,273.4,38410918,4.96
+recent_even1_m8,1,1,12,31,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,60.4,273.5,38566646,4.96
+recent_even1_m8,2,1,12,16,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,72.6,273.8,38750504,4.96
+recent_even1_m8,3,1,12,20,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,54.0,273.8,38884892,4.96
+recent_even1_m8,4,1,12,33,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,53.7,273.7,39017146,4.96
+randtrig_m8,0,1,12,21,3,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,109.0,273.7,39297967,4.96
+randtrig_m8,1,1,12,27,6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,3.2,273.7,39297967,4.96
+randtrig_m8,2,1,12,25,11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,3.4,273.7,39297967,4.96
+randtrig_m8,3,1,12,20,5,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,168.9,273.8,39738954,4.96
+randtrig_m8,4,1,12,31,6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,3.2,273.8,39738954,4.96
+active_even1_m8,0,1,12,143,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,313.4,273.7,40567203,4.96
+active_even1_m8,1,1,12,144,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,302.0,273.4,41354386,4.96
+active_even1_m8,2,1,12,149,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,327.5,273.6,42207808,4.96
+active_even1_m8,3,1,12,124,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,316.4,273.5,43031215,4.96
+active_even1_m8,4,1,12,122,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,324.5,273.7,43873128,4.96
+active_dtr_m8,0,1,12,149,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,162.4,273.6,44294539,4.96
+active_dtr_m8,1,1,12,143,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,152.3,273.4,44682107,4.96
+active_dtr_m8,2,1,12,154,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,158.3,273.4,45090692,4.96
+active_dtr_m8,3,1,12,125,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,158.0,273.3,45499284,4.96
+active_dtr_m8,4,1,12,137,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,148.7,273.0,45879844,4.96
+dtr_noreset_m8,0,10,66,110,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,18.2,273.0,45879844,4.96
+dtr_noreset_m8,1,10,66,105,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,18.6,273.0,45879844,4.96
+dtr_noreset_m8,2,10,66,115,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,18.8,273.0,45879844,4.96
+dtr_noreset_m8,3,10,66,104,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,19.2,273.0,45879844,4.96
+dtr_noreset_m8,4,10,66,106,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,19.5,273.0,45879844,4.96
+dtr_guard_m8,0,1,12,21,3,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,3.9,273.0,45879844,4.96
+dtr_guard_m8,1,1,12,29,3,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,110.5,273.0,46180015,4.96
+dtr_guard_m8,2,1,12,23,3,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,105.0,273.0,46455805,4.96
+dtr_guard_m8,3,1,12,34,3,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,106.2,272.9,46730434,4.96
+dtr_guard_m8,4,1,12,33,3,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,104.7,272.8,46996162,4.96
+static,5,0,6,8,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,250.0,143.3,957154,4.53
+static,6,0,6,10,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,336.8,191.5,1944399,5.04
+static,7,0,6,9,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,300.9,207.9,2828048,5.04
+static,8,0,6,22,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,286.0,215.1,3669793,5.04
+static,9,0,6,10,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,363.5,231.1,4730370,5.2
+recent_R1,5,10,66,99,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,269.2,233.5,5471649,5.2
+recent_R1,6,10,66,107,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,270.8,235.7,6220828,5.2
+recent_R1,7,10,66,91,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,274.3,237.7,6976407,5.2
+recent_R1,8,10,66,130,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,274.6,239.4,7733486,5.2
+recent_R1,9,10,66,105,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,273.1,240.7,8485565,5.2
+random_R1,5,10,66,127,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,264.3,241.1,9210244,5.2
+random_R1,6,10,66,116,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,278.8,242.5,9980523,5.2
+random_R1,7,10,66,115,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,264.5,242.8,10709602,5.2
+random_R1,8,10,66,126,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,267.7,243.2,11446781,5.2
+random_R1,9,10,66,95,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,265.6,243.5,12177360,5.2
+recent_R3,5,3,24,32,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,129.2,243.8,12544577,5.2
+recent_R3,6,3,24,38,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,126.8,243.9,12905763,5.2
+recent_R3,7,3,24,36,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,136.9,244.6,13295209,5.2
+recent_R3,8,3,24,56,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,138.2,245.3,13688360,5.2
+recent_R3,9,3,24,51,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,121.9,245.1,14033498,5.2
+random_R3,5,3,24,53,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,121.6,244.9,14376537,5.2
+random_R3,6,3,24,46,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,129.1,245.1,14744873,5.2
+random_R3,7,3,24,30,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,123.2,245.0,15093260,5.2
+random_R3,8,3,24,54,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,127.6,245.1,15454902,5.2
+random_R3,9,3,24,28,4 7 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,117.4,244.8,15786217,5.2
+fixed_w1,5,1,12,14,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,242.2,245.9,16494826,5.2
+fixed_w1,6,1,12,23,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,256.1,247.4,17242765,5.2
+fixed_w1,7,1,12,17,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,243.3,248.4,17954870,5.2
+fixed_w1,8,1,12,35,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,227.9,248.7,18622401,5.2
+fixed_w1,9,1,12,17,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,229.6,249.0,19294302,5.2
+dtr_m6,5,2,18,22,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,152.3,249.9,19728690,5.2
+dtr_m6,6,2,18,33,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,107.6,249.2,20025388,5.2
+dtr_m6,7,2,18,23,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,115.6,248.7,20349526,5.2
+dtr_m6,8,2,18,41,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,123.3,248.6,20701594,5.2
+dtr_m6,9,2,18,24,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,146.1,249.3,21118342,5.2
+recent_even2_m6,5,2,18,28,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,107.4,249.4,21423569,5.2
+recent_even2_m6,6,2,18,27,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,107.8,249.6,21729372,5.2
+recent_even2_m6,7,2,18,27,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,103.1,249.6,22020889,5.2
+recent_even2_m6,8,2,18,45,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,116.8,250.1,22352162,5.2
+recent_even2_m6,9,2,18,35,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,104.2,250.1,22647207,5.2
+randtrig_m6,5,2,18,23,4 5,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,137.8,249.7,23037626,5.2
+randtrig_m6,6,2,18,25,3 5,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,176.8,249.7,23547090,5.2
+randtrig_m6,7,2,18,31,3 10,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,137.6,249.2,23938884,5.2
+randtrig_m6,8,2,18,47,6 7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,51.6,249.2,24077928,5.2
+randtrig_m6,9,2,18,36,7 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,4.5,249.2,24077928,5.2
+active_even2_m6,5,2,18,132,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,505.0,247.8,25528295,5.2
+active_even2_m6,6,2,18,215,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,463.0,245.8,26851759,5.2
+active_even2_m6,7,2,18,117,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,497.0,244.9,28281690,5.2
+active_even2_m6,8,2,18,162,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,463.0,243.5,29613399,5.2
+active_even2_m6,9,2,18,205,4 9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,452.5,241.9,30915772,5.2
+active_dtr_m6,5,2,18,153,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,410.6,241.8,32107678,5.2
+active_dtr_m6,6,2,18,186,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,361.2,240.6,33146648,5.2
+active_dtr_m6,7,2,18,142,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,377.4,239.8,34230962,5.2
+active_dtr_m6,8,2,18,154,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,377.1,239.0,35329558,5.2
+active_dtr_m6,9,2,18,223,2 6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,419.0,239.1,36549087,5.2
+dtr_noreset_m6,5,10,66,99,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,18.4,239.1,36549087,5.2
+dtr_noreset_m6,6,10,66,107,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,18.3,239.1,36549087,5.2
+dtr_noreset_m6,7,10,66,91,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,18.1,239.1,36549087,5.2
+dtr_noreset_m6,8,10,66,130,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,17.8,239.1,36549087,5.2
+dtr_noreset_m6,9,10,66,105,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,18.3,239.1,36549087,5.2
+dtr_guard_m6,5,2,18,38,3 8,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,159.1,238.9,37004799,5.2
+dtr_guard_m6,6,2,18,30,3 8,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,168.6,239.4,37489134,5.2
+dtr_guard_m6,7,2,18,29,3 8,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,81.0,239.5,37714239,5.2
+dtr_guard_m6,8,2,18,43,3 8,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,168.5,239.4,38198317,5.2
+dtr_guard_m6,9,2,18,26,3 8,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,173.0,239.5,38695412,5.2
+dtr_m8,5,1,12,14,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,3.7,239.5,38695412,5.2
+dtr_m8,6,1,12,23,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,3.6,239.5,38695412,5.2
+dtr_m8,7,1,12,17,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,3.8,239.5,38695412,5.2
+dtr_m8,8,1,12,35,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,3.9,239.5,38695412,5.2
+dtr_m8,9,1,12,17,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,3.7,239.5,38695412,5.2
+recent_even1_m8,5,1,12,17,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,55.7,239.6,38850364,5.2
+recent_even1_m8,6,1,12,23,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,53.1,239.7,38999108,5.2
+recent_even1_m8,7,1,12,15,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,58.1,239.8,39162208,5.2
+recent_even1_m8,8,1,12,41,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,3.1,239.8,39162208,5.2
+recent_even1_m8,9,1,12,27,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,51.2,239.9,39303774,5.2
+randtrig_m8,5,1,12,14,5,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,3.3,239.9,39303774,5.2
+randtrig_m8,6,1,12,19,5,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,3.4,239.9,39303774,5.2
+randtrig_m8,7,1,12,22,3,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,48.1,239.8,39433077,5.2
+randtrig_m8,8,1,12,28,6,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,3.1,239.8,39433077,5.2
+randtrig_m8,9,1,12,19,9,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,3.0,239.8,39433077,5.2
+active_even1_m8,5,1,12,130,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,295.6,240.1,40298786,5.2
+active_even1_m8,6,1,12,132,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,269.2,240.0,41082319,5.2
+active_even1_m8,7,1,12,109,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,284.8,240.1,41916554,5.2
+active_even1_m8,8,1,12,137,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,280.9,240.1,42738798,5.2
+active_even1_m8,9,1,12,201,7,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,308.5,240.6,43638060,5.2
+active_dtr_m8,5,1,12,140,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,142.2,240.6,44047820,5.2
+active_dtr_m8,6,1,12,133,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,115.2,240.1,44376988,5.2
+active_dtr_m8,7,1,12,112,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,127.1,239.8,44735940,5.2
+active_dtr_m8,8,1,12,141,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,135.7,239.7,45123508,5.2
+active_dtr_m8,9,1,12,167,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,139.2,239.6,45522765,5.2
+dtr_noreset_m8,5,10,66,99,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,18.7,239.6,45522765,5.2
+dtr_noreset_m8,6,10,66,107,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,18.1,239.6,45522765,5.2
+dtr_noreset_m8,7,10,66,91,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,18.6,239.6,45522765,5.2
+dtr_noreset_m8,8,10,66,130,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,18.2,239.6,45522765,5.2
+dtr_noreset_m8,9,10,66,105,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,18.1,239.6,45522765,5.2
+dtr_guard_m8,5,1,12,26,3,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,86.2,239.4,45767595,5.2
+dtr_guard_m8,6,1,12,16,3,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,124.7,239.9,46125429,5.2
+dtr_guard_m8,7,1,12,22,3,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,3.7,239.9,46125429,5.2
+dtr_guard_m8,8,1,12,32,3,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,98.9,239.9,46409733,5.2
+dtr_guard_m8,9,1,12,18,3,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,90.5,239.8,46666173,5.2

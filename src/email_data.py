@@ -88,9 +88,10 @@ def parse_corpus(root, out_csv, max_chars=1500, limit=None, log_every=10000):
 
 
 def build_email_stream(csv_path, n_periods=12, eval_per_class=50, pool_frac0=0.6, seed=0,
-                       ex_chars=300, msg_chars=500):
+                       ex_chars=300, msg_chars=500, natural_per_period=0):
     """Equal-duration periods over the real delivery time span. Period 0: 60% labelled pool / 40% stable eval set.
-    evalset = fixed, class-balanced random sample (eval_per_class spam + eval_per_class ham) per period."""
+    evalset = fixed, class-balanced random sample (eval_per_class spam + eval_per_class ham) per period.
+    evalnat = fixed uniform random sample of natural_per_period emails per period, keeping the true class ratio (comment 15)."""
     from .common import format_email
     df = pd.read_csv(csv_path)
     df["recv"] = pd.to_datetime(df.recv, utc=True, format="ISO8601")
@@ -111,6 +112,12 @@ def build_email_stream(csv_path, n_periods=12, eval_per_class=50, pool_frac0=0.6
             if len(ix) < eval_per_class:
                 raise ValueError(f"period {p}, label {y}: only {len(ix)} eligible emails (< {eval_per_class})")
             df.loc[rng.choice(ix, eval_per_class, replace=False), "evalset"] = True
+    df["evalnat"] = False
+    if natural_per_period:
+        rng2 = np.random.default_rng(seed + 1)
+        for p in range(n_periods):
+            ix = df.index[(df.period == p) & ((df.period > 0) | (df.split == "eval"))].to_numpy()
+            df.loc[rng2.choice(ix, min(natural_per_period, len(ix)), replace=False), "evalnat"] = True
     df["ex_text"] = [format_email(s, b, ex_chars) for s, b in zip(df.subject, df.body)]
     df["msg_text"] = [format_email(s, b, msg_chars) for s, b in zip(df.subject, df.body)]
     return df.reset_index(drop=True)

@@ -1,0 +1,37 @@
+{
+  "parsed": "/kaggle/input/trec07p-drift/trec07p_parsed.csv",
+  "out": "/kaggle/working/out/prompt1",
+  "backend": "hf",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "no_4bit": true,
+  "batch_size": 8,
+  "periods": 12,
+  "eval_per_class": 50,
+  "eval_mode": "balanced",
+  "natural_per_period": 300,
+  "k": 6,
+  "ex_chars": 300,
+  "msg_chars": 500,
+  "prompt_variant": 1,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "intervals": [
+    1,
+    3
+  ],
+  "dtr_mult": [
+    6,
+    8
+  ],
+  "suite": [
+    "main"
+  ],
+  "only": [
+    "zs",
+    "static",
+    "dtr_m8"
+  ]
+}

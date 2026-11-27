@@ -1,0 +1,9 @@
+policy,seed,refreshes,labels_used,labels_inspected,schedule,k,prompt_variant,eval_mode,model,seconds,ms_per_email_uncached,tokens_total,peak_gpu_gb
+static,0,0,4,8,,4,0,balanced,Qwen/Qwen2.5-3B-Instruct,224.5,191.6,535613,4.36
+static,1,0,4,17,,4,0,balanced,Qwen/Qwen2.5-3B-Instruct,300.4,224.2,1255138,4.51
+recent_even2_m6,0,2,12,21,4 9,4,0,balanced,Qwen/Qwen2.5-3B-Instruct,188.3,226.6,1701360,4.51
+recent_even2_m6,1,2,12,29,4 9,4,0,balanced,Qwen/Qwen2.5-3B-Instruct,202.6,231.8,2180837,4.51
+dtr_m8,0,1,8,12,2,4,0,balanced,Qwen/Qwen2.5-3B-Instruct,349.2,256.3,3031238,4.71
+dtr_m8,1,1,8,24,2,4,0,balanced,Qwen/Qwen2.5-3B-Instruct,239.4,254.0,3601127,4.71
+recent_even1_m8,0,1,8,12,7,4,0,balanced,Qwen/Qwen2.5-3B-Instruct,120.6,252.8,3887612,4.71
+recent_even1_m8,1,1,8,22,7,4,0,balanced,Qwen/Qwen2.5-3B-Instruct,125.6,252.6,4181462,4.71

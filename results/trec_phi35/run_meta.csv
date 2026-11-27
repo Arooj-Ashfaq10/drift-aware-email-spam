@@ -1,0 +1,20 @@
+policy,seed,refreshes,labels_used,labels_inspected,schedule,k,prompt_variant,eval_mode,model,seconds,ms_per_email_uncached,tokens_total,peak_gpu_gb
+zs,0,0,0,0,,6,0,balanced,microsoft/Phi-3.5-mini-instruct,132.4,113.8,251152,5.32
+static,0,0,6,14,,6,0,balanced,microsoft/Phi-3.5-mini-instruct,405.2,230.2,1063352,6.43
+static,1,0,6,20,,6,0,balanced,microsoft/Phi-3.5-mini-instruct,549.0,310.3,2121156,6.92
+static,2,0,6,10,,6,0,balanced,microsoft/Phi-3.5-mini-instruct,443.9,327.7,2993884,6.92
+recent_R1,0,10,66,110,2 3 4 5 6 7 8 9 10 11,6,0,balanced,microsoft/Phi-3.5-mini-instruct,465.5,349.0,3866849,7.01
+recent_R1,1,10,66,105,2 3 4 5 6 7 8 9 10 11,6,0,balanced,microsoft/Phi-3.5-mini-instruct,467.5,364.1,4746714,7.01
+recent_R1,2,10,66,115,2 3 4 5 6 7 8 9 10 11,6,0,balanced,microsoft/Phi-3.5-mini-instruct,486.7,377.8,5636879,7.16
+fixed_w1,0,1,12,31,2,6,0,balanced,microsoft/Phi-3.5-mini-instruct,538.4,401.8,6598942,7.36
+fixed_w1,1,1,12,28,2,6,0,balanced,microsoft/Phi-3.5-mini-instruct,385.8,405.1,7348623,7.36
+fixed_w1,2,1,12,33,2,6,0,balanced,microsoft/Phi-3.5-mini-instruct,386.5,407.9,8101800,7.36
+recent_even2_m6,0,2,18,34,4 9,6,0,balanced,microsoft/Phi-3.5-mini-instruct,248.4,408.3,8578110,7.36
+recent_even2_m6,1,2,18,37,4 9,6,0,balanced,microsoft/Phi-3.5-mini-instruct,281.0,411.5,9111292,7.36
+recent_even2_m6,2,2,18,25,4 9,6,0,balanced,microsoft/Phi-3.5-mini-instruct,322.6,417.9,9717595,7.36
+dtr_m8,0,1,12,31,2,6,0,balanced,microsoft/Phi-3.5-mini-instruct,3.6,417.9,9717595,7.36
+dtr_m8,1,1,12,28,2,6,0,balanced,microsoft/Phi-3.5-mini-instruct,3.7,417.9,9717595,7.36
+dtr_m8,2,1,12,33,2,6,0,balanced,microsoft/Phi-3.5-mini-instruct,3.7,417.9,9717595,7.36
+recent_even1_m8,0,1,12,22,7,6,0,balanced,microsoft/Phi-3.5-mini-instruct,158.7,417.3,10028025,7.36
+recent_even1_m8,1,1,12,31,7,6,0,balanced,microsoft/Phi-3.5-mini-instruct,183.1,418.6,10379901,7.36
+recent_even1_m8,2,1,12,16,7,6,0,balanced,microsoft/Phi-3.5-mini-instruct,233.6,423.6,10818188,7.41

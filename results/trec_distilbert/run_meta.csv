@@ -1,0 +1,13 @@
+policy,seed,refreshes,labels_used,schedule,seconds
+bert_static_b50,0,0,50,,45
+bert_static_b50,1,0,50,,12
+bert_static_b50,2,0,50,,13
+bert_recent_b50,0,10,550,,63
+bert_recent_b50,1,10,550,,62
+bert_recent_b50,2,10,550,,64
+bert_static_b500,0,0,500,,53
+bert_static_b500,1,0,500,,52
+bert_static_b500,2,0,500,,52
+bert_recent_b500,0,10,5500,,476
+bert_recent_b500,1,10,5500,,477
+bert_recent_b500,2,10,5500,,478

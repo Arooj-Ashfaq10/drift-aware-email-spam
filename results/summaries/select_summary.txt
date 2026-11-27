@@ -1,0 +1,21 @@
+                        n  roca    sd  used    insp  ref
+policy                                                  
+dtr_keep2_m6            3  7.05  0.81  14.0   29.33  2.0
+dtr_keep2_m8            3  6.06  0.37  10.0   24.67  1.0
+dtr_keep3_m6            3  6.03  0.59  12.0   27.33  2.0
+dtr_keep3_m8            3  5.95  1.35   9.0   23.33  1.0
+sel_diversity_dtr       3  7.46  2.26  12.0   15.33  1.0
+sel_diversity_even      3  6.65  0.96  12.0   17.33  1.0
+sel_diversity_static    3  6.03  1.08   6.0    7.33  0.0
+sel_newest_dtr          3  5.79  0.63  12.0   35.00  1.0
+sel_newest_even         3  6.25  1.26  12.0   30.00  1.0
+sel_newest_static       3  6.66  1.64   6.0   19.00  0.0
+sel_random_dtr          3  6.68  1.24  12.0   30.67  1.0
+sel_random_even         3  7.45  1.46  12.0   23.00  1.0
+sel_random_static       3  6.19  0.50   6.0   14.67  0.0
+sel_similarity_dtr      3  6.27  1.83  12.0  201.67  1.0
+sel_similarity_even     3  5.80  1.49  12.0  185.33  1.0
+sel_similarity_static   3  6.28  2.26   6.0  151.67  0.0
+sel_uncertainty_dtr     3  6.67  1.88  12.0  154.33  1.0
+sel_uncertainty_even    3  7.55  2.09  12.0  161.67  1.0
+sel_uncertainty_static  3  6.02  1.14   6.0  133.33  0.0

@@ -29,12 +29,12 @@ class HFBackend:
         try:
             return self.tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
         except Exception:  # template without system role
-            msgs = [{"role": "user", "content": system_prompt + "\n\nSMS: " + text}]
+            msgs = [{"role": "user", "content": system_prompt + "\n\nEmail: " + text}]
             return self.tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
 
     def _label_ids(self):
         if self._ids is None:
-            p = self._prompt(ZS_SYSTEM, "hello")
+            p = self._prompt(ZS_SYSTEM, "hello")          # verbalizer token ids do not depend on the prompt variant
             base = self.tok(p, add_special_tokens=False).input_ids
             ids = []
             for lab in ("Spam", "Ham"):
@@ -52,6 +52,9 @@ class HFBackend:
         sp, hm = self._label_ids()
         prompts = [self._prompt(system_prompt, t) for t in texts]
         enc = self.tok(prompts, return_tensors="pt", padding=True, add_special_tokens=False).to(self.model.device)
+        self.tokens = getattr(self, "tokens", 0) + int(enc.attention_mask.sum())          # compute-cost accounting
+        if torch.cuda.is_available():
+            self.peak_mem_gb = max(getattr(self, "peak_mem_gb", 0.0), torch.cuda.max_memory_allocated() / 1e9)
         with torch.no_grad():
             try:
                 h = self.model.model(input_ids=enc.input_ids, attention_mask=enc.attention_mask).last_hidden_state[:, -1, :]

@@ -1,0 +1,26 @@
+policy,seed,refreshes,labels_used,labels_inspected,schedule,k,prompt_variant,eval_mode,model,seconds,ms_per_email_uncached,tokens_total,peak_gpu_gb
+zs,0,0,0,0,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,83.0,72.8,203727,4.06
+static,0,0,6,9,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,344.3,187.2,1056114,4.54
+static,1,0,6,6,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,304.9,213.7,1803621,4.54
+static,2,0,6,7,,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,344.0,235.6,2653728,4.54
+recent_R1,0,10,66,100,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,307.7,246.9,3387893,4.54
+recent_R1,1,10,66,82,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,292.5,252.5,4083058,4.54
+recent_R1,2,10,66,87,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,304.0,258.1,4801523,4.54
+random_R1,0,10,66,84,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,311.2,263.2,5543388,4.59
+random_R1,1,10,66,88,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,303.7,266.5,6268553,4.59
+random_R1,2,10,66,86,2 3 4 5 6 7 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,309.5,269.6,6998718,4.59
+fixed_w1,0,1,12,22,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,275.2,273.5,7669724,4.59
+fixed_w1,1,1,12,13,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,265.8,276.0,8319405,4.59
+fixed_w1,2,1,12,18,2,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,221.8,274.9,8843695,4.59
+dtr_m6,0,7,48,74,2 5 6 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,32.9,275.1,8907513,4.59
+dtr_m6,1,7,48,59,2 5 6 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,34.9,275.5,8974943,4.59
+dtr_m6,2,7,48,61,2 5 6 8 9 10 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,33.6,275.7,9040189,4.59
+recent_even7_m6,0,7,48,74,2 4 5 7 8 9 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,68.0,276.2,9189475,4.59
+recent_even7_m6,1,7,48,61,2 4 5 7 8 9 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,61.7,276.2,9322640,4.59
+recent_even7_m6,2,7,48,60,2 4 5 7 8 9 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,63.9,276.4,9461424,4.59
+dtr_m8,0,6,42,67,2 5 6 8 9 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,6.3,276.4,9461424,4.59
+dtr_m8,1,6,42,52,2 5 6 8 9 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,6.1,276.4,9461424,4.59
+dtr_m8,2,6,42,53,2 5 6 8 9 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,6.3,276.4,9461424,4.59
+recent_even6_m8,0,6,42,66,2 4 6 7 9 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,59.7,276.4,9589351,4.59
+recent_even6_m8,1,6,42,53,2 4 6 7 9 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,60.5,276.6,9721785,4.59
+recent_even6_m8,2,6,42,53,2 4 6 7 9 11,6,0,balanced,Qwen/Qwen2.5-3B-Instruct,67.5,277.2,9872308,4.59

@@ -1,0 +1,7 @@
+periods,days_per_period,mult,refreshes,refresh_before,first_refresh_day,delay_after_change_days,alarms_before_change,first_post_change_delay_days,labels
+12,7.4,6,2,"[2, 6]",14.8,7.4,0,7.4,18
+12,7.4,8,1,[2],14.8,7.4,0,7.4,12
+24,3.7,6,8,"[2, 3, 4, 6, 8, 13, 21, 22]",7.4,0.0,1,3.7,54
+24,3.7,8,5,"[2, 3, 4, 7, 19]",7.4,0.0,1,3.7,36
+48,1.85,6,7,"[3, 4, 8, 11, 13, 16, 42]",5.5,-1.8,2,7.4,48
+48,1.85,8,2,"[3, 4]",5.5,-1.8,2,,18
