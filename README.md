@@ -29,7 +29,7 @@ No email text is stored in this repository; result files contain email ids, labe
 | Selection rules and partial replacement | `run_email_drift.py --suite selection partial` | GPU | Table `tab:sel` |
 | k, prompt wording, natural class ratio, second LLM | `run_email_drift.py --k / --prompt_variant / --eval_mode natural / --model` | GPU | Table `tab:gen` |
 | Fine-tuned DistilBERT baseline | `baseline_distilbert.py` | GPU | Ablations text |
-| Controlled drift streams and detector comparison (KS, MMD, Page-Hinkley, DDM) | `synthetic_drift.py` | CPU | Table `tab:det`, Fig. 5b |
+| Controlled drift streams and detector comparison (KS, MMD, Page-Hinkley, DDM) | `synthetic_drift.py` | CPU | Table `tab:det` |
 | Second corpus CEAS-08 | `prep_ceas.py` + the runners above | GPU | Table `tab:ceas` |
 | Shorter monitoring windows | `window_size.py` | CPU | Failure analysis |
 | Two-stage filter (classifier + LLM) | `two_stage.py` | CPU | Table `tab:twostage` |
